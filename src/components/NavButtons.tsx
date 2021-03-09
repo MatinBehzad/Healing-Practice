@@ -22,10 +22,9 @@ export const NavButtons = () => {
         <IonMenuButton />
       ) : (
         <>
-          <IonButton routerLink={"/home"}>Meet Lynda</IonButton>
+          <IonButton routerLink={"/meetLyndaContact"}>Meet Lynda</IonButton>
           <IonButton routerLink={"/page-1"}>Services</IonButton>
           <IonButton routerLink={"/page-2"}>Rates and Packages</IonButton>
-          <IonButton routerLink={"/page-3"}>Contact Lynda</IonButton>
           <IonButton routerLink={"/page-4"}>Testimonials</IonButton>
         
         </>

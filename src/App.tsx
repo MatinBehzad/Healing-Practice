@@ -2,7 +2,7 @@ import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import Home from './pages/Home';
+import Home from './pages/MeetLynda';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -23,20 +23,38 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import PageOne from './pages/PageOne';
-import PageThree from './pages/PageThree';
+import Contact from './pages/Contact';
 import PageFour from './pages/PageFour';
 import { Menu } from './components/Menu';
 import PageTwo from './pages/PageTwo';
+import Confirm from './pages/Confirm';
+import MeetLynda from './pages/MeetLynda'
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <Menu/>
       <IonRouterOutlet  id="main">
+        
         <Route path="/home" component={Home} exact={true} />
         <Route path="/page-1" component={PageOne} exact={true} />
         <Route path="/page-2" component={PageTwo} exact={true} />
-        <Route path="/page-3" component={PageThree} exact={true} />
+        <Route path="/meetLyndaContact" component={Contact} exact={true} />
+
+        <Route exact path="/meetLyndaContact">
+           <MeetLynda /> 
+        </Route>
+        <Route exact path="/confirm" component={Confirm} />
+        <Route path="/confirm/:date/:time" component={Confirm} />
+        <Route exact path="/">
+          <Redirect to="/meetLyndaContact" />
+        </Route>
+        <Route exact path="/contact" component={Contact}>
+        <Route path="/contact/:date/:time" component={Contact} />
+           <Contact /> 
+        </Route>
+  
+          
         <Route path="/page-4" component={PageFour} exact={true} />
         <Route exact path="/" render={() => <Redirect to="/home" />} />
       </IonRouterOutlet>

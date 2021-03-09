@@ -24,8 +24,8 @@ export const Menu = () => {
       <IonContent>
         <IonList>
           <IonMenuToggle auto-hide="false">
-            <IonItem button routerLink={"/home"} routerDirection="none">
-              <IonLabel>Meet Lynda</IonLabel>
+            <IonItem button routerLink={"/meetLyndaContact"} routerDirection="none">
+              <IonLabel>Meet and contact Lynda</IonLabel>
             </IonItem>
           </IonMenuToggle>
           <IonMenuToggle auto-hide="false">
@@ -35,9 +35,7 @@ export const Menu = () => {
             <IonItem button routerLink={"/page-2"} routerDirection="none">
               <IonLabel>Rates and Packages</IonLabel>
             </IonItem>
-            <IonItem button routerLink={"/page-3"} routerDirection="none">
-              <IonLabel>Contact Lynda</IonLabel>
-            </IonItem>
+            
             <IonItem button routerLink={"/page-4"} routerDirection="none">
               <IonLabel>Testimonials</IonLabel>
             </IonItem>
